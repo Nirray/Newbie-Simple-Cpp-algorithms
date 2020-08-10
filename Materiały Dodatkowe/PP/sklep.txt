@@ -1,0 +1,31 @@
+#include <iostream>
+#include <math.h>
+#include <cstdlib>
+using namespace std;
+
+
+/*Zrobiæ program, który wczytuje kolejne kwoty (np zakupów), by obilczyæ ich wartoœæ sumaryczn¹ (a w wersji 2 dodatkowo œredni¹) proces wczytywania koñczymy po podaniu 0 (to 0 nie traktujemy jako kwotê
+ lecz jako sygnal koñca. Na koniec wyœwietlamy wynik*/
+main()
+{
+	float suma, j, wynik, srednia;
+	wynik=0;
+	j=0;
+	do
+		{
+			cout<<"Wprowadz kwote zakupow: "<<endl;
+			cin>>suma;
+			if(suma>=0)
+				{
+					wynik=suma+wynik;
+					j++;
+				}
+			else
+			cout<<"kwota musi byc wieksza od 0"<<endl;
+		}
+	while(suma!=0);
+	cout<<"suma zakupow rowna: "<<wynik<<endl;
+	srednia=(wynik/(j-1));
+	cout<<"srednia cena zakupow rowna jest: "<<srednia;
+system("pause");
+}

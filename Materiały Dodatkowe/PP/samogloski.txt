@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string tekst;
+    cout<<"Podaj tekst do analizy: "<<endl;
+    cin>>tekst;
+   
+    int liczba_samoglosek;
+    for (int i=0; i<tekst.length(); i++)
+    {
+        if (tekst[i]=='a'||tekst[i]=='o'||tekst[i]=='e'||tekst[i]=='i'||
+        tekst[i]=='u'||tekst[i]=='y')
+            liczba_samoglosek++;
+    }
+        cout<<"liczba samoglosek= "<<liczba_samoglosek;
+        getchar();
+}
